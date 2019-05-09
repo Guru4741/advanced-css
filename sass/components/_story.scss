@@ -25,6 +25,20 @@
         -o-transform: skew(12deg);
 }
 
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+
+    @include respond(phone){
+        transform: skew(0);
+        -webkit-transform: skew(0);
+        -moz-transform: skew(0);
+        -ms-transform: skew(0);
+        -o-transform: skew(0);
+}
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -37,6 +51,15 @@
         -ms-transform: translateX(-3rem) skew(12deg);
         -o-transform: translateX(-3rem) skew(12deg);
         position: relative;
+
+        @include respond(phone){
+            transform: translate(-3rem) skew(0);
+            -webkit-transform: translate(-3rem) skew(0);
+            -moz-transform: translate(-3rem) skew(0);
+            -ms-transform: translate(-3rem) skew(0);
+            -o-transform: translate(-3rem) skew(0);
+}
+        
 }
 
     &__img {
@@ -54,6 +77,25 @@
         -ms-transition: all .5s;
         -o-transition: all .5s;
 }
+
+    &__text {
+        transform: skewX(12deg);
+        -webkit-transform: skewX(12deg);
+        -moz-transform: skewX(12deg);
+        -ms-transform: skewX(12deg);
+        -o-transform: skewX(12deg);
+
+        @include respond(phone){
+            transform: skewX(0);
+            -webkit-transform: skewx(0);
+            -moz-transform: skewx(0);
+            -ms-transform: skewx(0);
+            -o-transform: skewx(0);
+}
+}
+
+
+
 
     &__caption {
         position: absolute;
